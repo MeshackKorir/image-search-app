@@ -8,7 +8,7 @@ const showMore = document.getElementById("show-more-button")
 let inputData = ""
 let page = 1;
 
-async function serachImages() {
+async function searchImages() {
     inputData = inputEl.value;
     const url = `https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&client_id=${accesskey}`
 
@@ -43,3 +43,14 @@ async function serachImages() {
         showMore.style.display = "block"
     }
 }
+
+formEl.addEventListener("submit", (event) =>{
+    event.preventDefault()
+    page = 1;
+    searchImages()
+})
+
+showMore.addEventListener("click", () =>{
+    searchImages()
+})
+
