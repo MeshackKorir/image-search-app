@@ -100,5 +100,19 @@ form {
     margin: 30px auto;
     border-radius: 5px;
     cursor: pointer;
-    /* display: none; */
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .search-result {
+        padding: 20px;
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search-result {
+        width: 100%;
+    }
 }
